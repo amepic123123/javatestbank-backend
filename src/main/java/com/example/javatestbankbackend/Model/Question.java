@@ -1,14 +1,12 @@
 package com.example.javatestbankbackend.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@Entity
 public class Question {
 
     @Id
-    @GeneratedValue (strategy =  GenerationType.IDENTITY)
+    @GeneratedValue (strategy =  GenerationType.SEQUENCE)
     private Long id;
 
     private String questionText;
